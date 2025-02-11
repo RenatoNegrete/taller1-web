@@ -34,4 +34,10 @@ public class Controlador {
         return new ModelAndView("/requerimientos");
     }
     
+    @GetMapping("/contactenos")
+    public ModelAndView contactenosModelAndView() {
+        return new ModelAndView("/contactenos");
+    }
+
+
 }
