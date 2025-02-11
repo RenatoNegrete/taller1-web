@@ -36,7 +36,7 @@ public class Controlador {
     
     @GetMapping("/contactenos")
     public ModelAndView contactenosModelAndView() {
-        return new ModelAndView("/contactenos");
+        return new ModelAndView("/Formulario");
     }
 
 
