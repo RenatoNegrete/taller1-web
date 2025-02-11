@@ -11,11 +11,27 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/plantillas") 
 public class Controlador {
 
-    @GetMapping("/plantillas")
+    @GetMapping("/home")
     public ModelAndView archivoModelAndView()
     {
 
         return new ModelAndView("/archivo");
 
     }   
+
+    @GetMapping("/team")
+    public ModelAndView equipoModelAndView() {
+        return new ModelAndView("/equipo");
+    }
+    
+    @GetMapping("/proyectdescription")
+    public ModelAndView proyectDescriptionModelAndView() {
+        return new ModelAndView("/descipcion_proyecto");
+    }
+    
+    @GetMapping("/requirements")
+    public ModelAndView requirementsModelAndView() {
+        return new ModelAndView("/requerimientos");
+    }
+    
 }
