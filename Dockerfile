@@ -1,15 +1,26 @@
-# Use una imagen base que tenga Java instalado
-FROM openjdk:17
+# Usa una imagen con Maven para compilar la app
+FROM maven:3.9.6-eclipse-temurin-17 AS builder
 
-COPY . /app
 # Establece el directorio de trabajo
 WORKDIR /app
 
-# Construye el archivo JAR de la aplicación
-RUN ./mvnw clean install -DskipTests
+# Copia el pom.xml y las dependencias primero para aprovechar el caché de Docker
+COPY pom.xml .
+COPY src ./src
 
-# Ejecuta la aplicación Spring Boot cuando se inicia el contenedor
-CMD ["java", "-jar", "target/demo-0.0.1-SNAPSHOT.jar"]
+# Compila el proyecto sin correr tests
+RUN mvn clean package -DskipTests
 
-# Exponer el puerto 8082
-EXPOSE 8082
+# Segunda etapa: imagen más ligera con solo el JAR
+FROM openjdk:17
+
+WORKDIR /app
+
+# Copia el JAR generado desde la etapa de construcción
+COPY --from=builder /app/target/demo-0.0.1-SNAPSHOT.jar app.jar
+
+# Exponer el puerto que usa la app
+EXPOSE 8080
+
+# Comando para ejecutar la aplicación
+CMD ["java", "-jar", "app.jar"]

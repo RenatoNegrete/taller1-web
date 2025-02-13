@@ -15,23 +15,23 @@ public class Controlador {
     public ModelAndView archivoModelAndView()
     {
 
-        return new ModelAndView("/archivo");
+        return new ModelAndView("archivo");
 
     }   
 
     @GetMapping("/team")
     public ModelAndView equipoModelAndView() {
-        return new ModelAndView("/equipo");
+        return new ModelAndView("equipo");
     }
     
     @GetMapping("/proyectdescription")
     public ModelAndView proyectDescriptionModelAndView() {
-        return new ModelAndView("/descipcion_proyecto");
+        return new ModelAndView("descipcion_proyecto");
     }
     
     @GetMapping("/requirements")
     public ModelAndView requirementsModelAndView() {
-        return new ModelAndView("/requerimientos");
+        return new ModelAndView("requerimientos");
     }
     
 }
