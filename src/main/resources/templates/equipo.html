@@ -5,46 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestro equipo</title>
     <link rel="stylesheet" th:href="@{/styles/equipo.css}">
-
 </head>
 <body>
-    <h1>Presentacion del equipo</h1>
 
-    <p>Equipo HTML</p>
-    <strong>Listado de integrantes</strong>
-    <ul>
-        <li>
-            <p>Gianfranco Cassandro Apraez </p>
-            <p>Rol</p>
-            <p>Lenguajes en que desarrollan: Kotlin, Java, Html, Python</p>
-            <p>Estudiante de ingenieria de sistemas de septimo semestre, intereses y aptitudes por el desarrollo movil, analitica de datos e IA </p>
-        </li>
-        <li>
-            <p>Renato Negrete Puente</p>
-            <p>Rol</p>
-            <p>Lenguajes en que desarrollo: c++, Java, Python, Kotlin</p>
-            <p>Estudiante de ingenieria de sistemas de sexto semestre, intereses en la cyberseguridad y el desarrollo de software</p>
-        </li>
-        <li>
-            <p>Juan Felipe Galvis</p>
-            <p>Rol</p>
-            <p>Lenguajes en que desarrollo: c++, Java, Python</p>
-            <p>Estudiante de ingenieria de sistemas de sexto semestre, intereses en el desarrollo móvil y el diseño</p>
-        </li>
-        <li>
-            <p>Juan Esteban Paez Alfonso</p>
-            <p>Rol</p>
-            <p>Lenguajes en que desarrolla: C++, Java, Python, Kotlin</p>
-            <p>Estudiante de ingenieria de Sistemas apasionado por la ciberseguridad y entusiasta de la seguridad de datos y redes </p>
-        </li>
-        <li>
-            <p>xx</p>
-            <p>xx</p>
-            <p>xx</p>
-            <p>Estudiante de ingenieria de Sistemas.... </p>
-        </li>
-
-    </ul>
+    <div class="navbar">
+        <ul>
+            <li><a th:href="@{/plantillas/home}">Home</a></li>
+            <li><a th:href="@{/plantillas/proyectdescription}">Proyecto</a></li>
+            <li><a th:href="@{/plantillas/requirements}">Requerimientos</a></li>
+            <li><a th:href="@{/plantillas/contactenos}">Contactenos</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>Presentacion del equipo</h1>
+        <h2>Equipo HTML</h2>
+        <div class="team">
+            <strong>Listado de integrantes</strong>
+            <ul>
+                <li>
+                    <p>Gianfranco Cassandro Apraez </p>
+                    <p>Rol</p>
+                    <p>Lenguajes en que desarrollan: Kotlin, Java, Html, Python</p>
+                    <p>Estudiante de ingenieria de sistemas de septimo semestre, intereses y aptitudes por el desarrollo movil, analitica de datos e IA </p>
+                </li>
+                <li>
+                    <p>Renato Negrete Puente</p>
+                    <p>Rol</p>
+                    <p>Lenguajes en que desarrollo: c++, Java, Python, Kotlin</p>
+                    <p>Estudiante de ingenieria de sistemas de sexto semestre, intereses en la cyberseguridad y el desarrollo de software</p>
+                </li>
+                <li>
+                    <p>Juan Felipe Galvis</p>
+                    <p>Rol</p>
+                    <p>Lenguajes en que desarrollo: c++, Java, Python</p>
+                    <p>Estudiante de ingenieria de sistemas de sexto semestre, intereses en el desarrollo móvil y el diseño</p>
+                </li>
+                <li>
+                    <p>Juan Esteban Paez Alfonso</p>
+                    <p>Rol</p>
+                    <p>Lenguajes en que desarrolla: C++, Java, Python, Kotlin</p>
+                    <p>Estudiante de ingenieria de Sistemas apasionado por la ciberseguridad y entusiasta de la seguridad de datos y redes </p>
+                </li>
+                <li>
+                    <p>xx</p>
+                    <p>xx</p>
+                    <p>xx</p>
+                    <p>Estudiante de ingenieria de Sistemas.... </p>
+                </li>
+            </ul>
+        </div>
+    </div>
 
 </body>
 </html>
