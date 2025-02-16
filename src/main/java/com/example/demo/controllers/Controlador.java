@@ -28,7 +28,7 @@ public class Controlador {
 
     @GetMapping("/proyectdescription")
     public ModelAndView proyectDescriptionModelAndView() {
-        return new ModelAndView("descripcion_proyecto"); 
+        return new ModelAndView("descipcion_proyecto"); 
     }
 
     @GetMapping("/requirements")
