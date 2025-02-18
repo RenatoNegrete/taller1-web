@@ -38,8 +38,9 @@ public class Controlador {
 
     @GetMapping("/contactenos")
     public ModelAndView contactenosModelAndView() {
-        return new ModelAndView("formulario"); 
+        return new ModelAndView("Formulario"); 
     }
+
 
     @GetMapping("/")
     public String mostrarFormulario(Model model) {

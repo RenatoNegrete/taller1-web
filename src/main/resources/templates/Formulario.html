@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <title>Formulario de Contacto</title>
     <link rel="stylesheet" th:href="@{/styles/Form.css}">
-
-    <style>
-        .error {
-            border: 2px solid red;
-        }
-        .mensaje-error {
-            color: red;
-            font-size: 12px;
-        }
-    </style>
 </head>
 <body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <ul>
+            <li><a th:href="@{/plantillas/home}">Home</a></li>
+            <li><a th:href="@{/plantillas/proyectdescription}">Proyecto</a></li>
+            <li><a th:href="@{/plantillas/team}">Equipo</a></li>
+            <li><a th:href="@{/plantillas/}">Contáctenos</a></li>
+        </ul>
+    </nav>
+
     <h2>Formulario de Contáctenos</h2>
     <form th:action="@{/plantillas/guardar}" th:object="${student}" method="post" onsubmit="return validarFormulario()">
         <label>Nombres:</label>
@@ -91,5 +92,6 @@
             return valido;
         }
     </script>
+
 </body>
 </html>
