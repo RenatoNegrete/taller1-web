@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.ui.Model;
 
-import com.example.demo.controllers.*;
 import com.example.demo.modelo.Estudent;
 import com.example.demo.service.EstudentService;
 
@@ -67,10 +66,13 @@ public class Controlador {
         return new ModelAndView("despliegue");
     }
 
+
+
     @GetMapping("/contactenos")
-    public ModelAndView contactenosModelAndView() {
-        return new ModelAndView("Formulario"); 
-    }
+    public ModelAndView contactenosModelAndView(Model model) {
+    model.addAttribute("student", new Estudent()); 
+    return new ModelAndView("Formulario");
+}
 
 
     @GetMapping("/")
