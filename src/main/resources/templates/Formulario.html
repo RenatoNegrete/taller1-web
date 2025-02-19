@@ -7,16 +7,7 @@
 </head>
 <body>
 
-    <!-- Barra de navegación -->
-    <nav class="navbar">
-        <ul>
-            <li><a th:href="@{/plantillas/home}">Home</a></li>
-            <li><a th:href="@{/plantillas/proyectdescription}">Proyecto</a></li>
-            <li><a th:href="@{/plantillas/team}">Equipo</a></li>
-            <li><a th:href="@{/plantillas/}">Contáctenos</a></li>
-        </ul>
-    </nav>
-
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
     <h2>Formulario de Contáctenos</h2>
     <form th:action="@{/plantillas/guardar}" th:object="${student}" method="post" onsubmit="return validarFormulario()">
         <label>Nombres:</label>
@@ -34,7 +25,7 @@
         <p id="errorCorreo" class="mensaje-error"></p>
 
         <label>Semestre:</label>
-        <input type="number" th:field="*{semestre}" id="semestre" min="1" max="16" required>
+        <input type="number" th:field="*{semestre}" id="semestre" min="0" max="16" oninput="validarSemestre()" required>
         <p id="errorSemestre" class="mensaje-error"></p>
 
         <label>Descripción:</label>
@@ -45,53 +36,7 @@
         <button type="submit">Enviar</button>
     </form>
 
-    <script>
-        function validarTexto(input, max) {
-            let contador = document.getElementById("contador" + input.id.charAt(0).toUpperCase() + input.id.slice(1));
-            contador.innerText = input.value.length + "/" + max;
-
-            if (input.value.length > max) {
-                input.value = input.value.substring(0, max);
-            }
-
-            if (input.value.length === 0) {
-                input.classList.add("error");
-            } else {
-                input.classList.remove("error");
-            }
-        }
-
-        function validarCorreo() {
-            let correo = document.getElementById("correo");
-            let errorCorreo = document.getElementById("errorCorreo");
-            let regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-
-            correo.value = correo.value.toUpperCase();
-
-            if (!regex.test(correo.value)) {
-                correo.classList.add("error");
-                errorCorreo.innerText = "El correo debe ser en mayúsculas, sin espacios, contener '@' y un dominio válido.";
-            } else {
-                correo.classList.remove("error");
-                errorCorreo.innerText = "";
-            }
-        }
-
-        function validarFormulario() {
-            let campos = document.querySelectorAll("input, textarea");
-            let valido = true;
-
-            campos.forEach(campo => {
-                if (campo.value.trim() === "") {
-                    campo.classList.add("error");
-                    document.getElementById("error" + campo.id.charAt(0).toUpperCase() + campo.id.slice(1)).innerText = "Este campo es obligatorio.";
-                    valido = false;
-                }
-            });
-
-            return valido;
-        }
-    </script>
+    <script th:src="@{/js/formulario.js}"></script>
 
 </body>
 </html>
