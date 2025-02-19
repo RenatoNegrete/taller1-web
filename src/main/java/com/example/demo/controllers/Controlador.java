@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.ui.Model;
 
-import com.example.demo.controllers.*;
 import com.example.demo.modelo.Estudent;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -58,32 +56,30 @@ public class Controlador {
         return new ModelAndView("despliegue");
     }
 
+
+
     @GetMapping("/contactenos")
-    public ModelAndView contactenosModelAndView() {
-        return new ModelAndView("Formulario"); 
-    }
+    public ModelAndView contactenosModelAndView(Model model) {
+    model.addAttribute("student", new Estudent()); 
+    return new ModelAndView("Formulario");
+}
 
-
-    @GetMapping("/")
-    public String mostrarFormulario(Model model) {
-        model.addAttribute("student", new com.example.demo.modelo.Estudent()); 
-        return "formulario";
-    }
 
     @PostMapping("/guardar")
-    public String guardarFormulario(@ModelAttribute Estudent student, BindingResult result, Model model) {
-    if (result.hasErrors()) {
-        return "formulario";
+    public String guardarFormulario(@ModelAttribute("student") Estudent student, BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            return "Formulario"; // Asegurar que el nombre coincide con el archivo
+        }
+    
+        // Imprimir los datos en la consola
+        System.out.println("=== Datos Recibidos ===");
+        System.out.println("Nombre: " + student.getNombres());
+        System.out.println("Apellidos: " + student.getApellidos());
+        System.out.println("Correo: " + student.getCorreo());
+        System.out.println("Semestre: " + student.getSemestre());
+        System.out.println("Descripción: " + student.getDescripcion());
+    
+        return "redirect:/plantillas/contactenos";
     }
-
-    // Imprimir los datos en la consola
-    System.out.println("=== Datos Recibidos ===");
-    System.out.println("Nombre: " + student.getNombres());
-    System.out.println("Apellidos: " + student.getApellidos());
-    System.out.println("Correo: " + student.getCorreo());
-    System.out.println("Semestre: " + student.getSemestre());
-    System.out.println("Descripción: " + student.getDescripcion());
-
-    return "redirect:/";
-}
+    
 }
