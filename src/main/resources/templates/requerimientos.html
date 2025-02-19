@@ -7,16 +7,10 @@
     <link rel="stylesheet" th:href="@{/styles/description.css}">
 </head>
 <body>
-    <div class="navbar">
-        <ul>
-            <li><a th:href="@{/plantillas/home}">Home</a></li>
-            <li><a th:href="@{/plantillas/proyectdescription}">Proyecto</a></li>
-            <li><a th:href="@{/plantillas/team}">Equipo</a></li>
-            <li><a th:href="@{/plantillas/contactenos}">Contactenos</a></li>
-        </ul>
-    </div>
+    <div th:replace="fragments/navbar :: navbar"></div>
     <div class="main-content">
         <h1>Requeremientos</h1>
+        <p>Informacion por anadir</p>
     </div>
 </body>
 </html>

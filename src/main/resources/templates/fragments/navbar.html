@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div th:fragment="navbar">
+        <div class="navbar">
+            <ul>
+                <li><a th:href="@{/plantillas/home}">Home</a></li>
+                <li><a th:href="@{/plantillas/proyectdescription}">Proyecto</a></li>
+                <li><a th:href="@{/plantillas/team}">Equipo</a></li>
+                <li><a th:href="@{/plantillas/requirements}">Requerimientos</a></li>
+                <li><a th:href="@{/plantillas/arquitectura}">Arquitectura</a></li>
+                <li><a th:href="@{/plantillas/desarrollo}">Desarrollo</a></li>
+                <li><a th:href="@{/plantillas/pruebas}">Pruebas</a></li>
+                <li><a th:href="@{/plantillas/despliegue}">Despliegue</a></li>
+                <li><a th:href="@{/plantillas/contactenos}">Contáctenos</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

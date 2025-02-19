@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.ui.Model;
 
-import com.example.Modelo.Estudent;
 import com.example.demo.controllers.*;
+import com.example.demo.modelo.Estudent;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 @RequestMapping("/plantillas")
@@ -36,6 +38,26 @@ public class Controlador {
         return new ModelAndView("requerimientos"); 
     }
 
+    @GetMapping("/arquitectura")
+    public ModelAndView arquitecturaModelAndView() {
+        return new ModelAndView("arquitectura");
+    }
+    
+    @GetMapping("/desarrollo")
+    public ModelAndView desarrolloModelAndView() {
+        return new ModelAndView("desarrollo");
+    }
+
+    @GetMapping("/pruebas")
+    public ModelAndView pruebasModelAndView() {
+        return new ModelAndView("pruebas");
+    }
+
+    @GetMapping("/despliegue")
+    public ModelAndView despliegueModelAndView() {
+        return new ModelAndView("despliegue");
+    }
+
     @GetMapping("/contactenos")
     public ModelAndView contactenosModelAndView() {
         return new ModelAndView("formulario"); 
@@ -43,7 +65,7 @@ public class Controlador {
 
     @GetMapping("/")
     public String mostrarFormulario(Model model) {
-        model.addAttribute("student", new com.example.Modelo.Estudent()); 
+        model.addAttribute("student", new com.example.demo.modelo.Estudent()); 
         return "formulario";
     }
 
