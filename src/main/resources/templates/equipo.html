@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestro equipo</title>
+    <link rel="stylesheet" th:href="@{/styles/navbar.css}">
     <link rel="stylesheet" th:href="@{/styles/equipo.css}">
 </head>
 <body>
     <div th:replace="~{fragments/navbar :: navbar}"></div>
     <div class="main-content">
         <h1>Presentacion del equipo</h1>
-        <h2>Equipo HTML</h2>
+        <h2>Team HTML</h2>
         <div class="team">
             <strong>Listado de integrantes</strong>
             <ul>
@@ -47,6 +48,6 @@
             </ul>
         </div>
     </div>
-
+    <script th:src="@{/js/menu.js}"></script>
 </body>
 </html>

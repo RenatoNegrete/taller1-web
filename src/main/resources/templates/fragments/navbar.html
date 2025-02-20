@@ -5,19 +5,44 @@
 </head>
 <body>
     <div th:fragment="navbar">
-        <div class="navbar">
-            <ul>
-                <li><a th:href="@{/plantillas/home}">Home</a></li>
-                <li><a th:href="@{/plantillas/proyectdescription}">Proyecto</a></li>
-                <li><a th:href="@{/plantillas/team}">Equipo</a></li>
-                <li><a th:href="@{/plantillas/requirements}">Requerimientos</a></li>
-                <li><a th:href="@{/plantillas/arquitectura}">Arquitectura</a></li>
-                <li><a th:href="@{/plantillas/desarrollo}">Desarrollo</a></li>
-                <li><a th:href="@{/plantillas/pruebas}">Pruebas</a></li>
-                <li><a th:href="@{/plantillas/despliegue}">Despliegue</a></li>
-                <li><a th:href="@{/plantillas/}">Contáctenos</a></li>
+        <nav class="navbar">
+            <a href="" class="brand">Team HTML</a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a th:href="@{/plantillas/home}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/plantillas/proyectdescription}" class="nav-link">Proyecto</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/plantillas/team}" class="nav-link">Equipo</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/plantillas/requirements}" class="nav-link">Requerimientos</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/plantillas/arquitectura}" class="nav-link">Arquitectura</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/plantillas/desarrollo}" class="nav-link">Desarrollo</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/plantillas/pruebas}" class="nav-link">Pruebas</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/plantillas/despliegue}" class="nav-link">Despliegue</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/plantillas/}" class="nav-link">Contáctenos</a>
+                </li>
             </ul>
-        </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
     </div>
 </body>
 </html>
