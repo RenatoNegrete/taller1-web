@@ -1,18 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desarrollo</title>
     <link rel="stylesheet" th:href="@{/styles/navbar.css}">
     <link rel="stylesheet" th:href="@{/styles/description.css}">
+    <style>
+        .main-content {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+        .acta {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .acta h2 {
+            margin-top: 0;
+        }
+        .acta ul {
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+    </style>
 </head>
 <body>
     <div th:replace="~{fragments/navbar :: navbar}"></div>
+
     <div class="main-content">
         <h1>Desarrollo</h1>
-        <p>Informacion por anadir</p>
+    </ul>
+        <div class="acta">
+            <h2>Acta 1 - Team HTML</h2>
+            <p><strong>Fecha:</strong> 25 feb. 25</p>
+            <p><strong>Asistentes:</strong></p>
+            <ul>
+                <li>Renato Negrete</li>
+                <li>Juan Esteban Paez</li>
+                <li>Juan Felipe Galvis</li>
+                <li>Gianfranco Cassandro</li>
+            </ul>
+            <p><strong>Actividades:</strong></p>
+            <ul>
+                <li>Se dejaron claros los roles del equipo:</li>
+                <ul>
+                    <li>Renato Negrete: Líder Grupo</li>
+                    <li>Juan Felipe Galvis: Líder Planeación</li>
+                    <li>Gianfranco Cassandro: Líder Desarrollo</li>
+                </ul>
+            </ul>
+            <p><strong>Cronograma:</strong></p>
+            <ul>
+                <li><strong>Semana 25 de febrero:</strong>
+                    <ul>
+                        <li>Inicio del proyecto en Spring Boot</li>
+                        <li>Diseño del modelo de base de datos</li>
+                        <li>Creación de estructura básica</li>
+                        <li>Planificación de pruebas y herramientas</li>
+                    </ul>
+                </li>
+                <li><strong>Semana 4 de marzo:</strong>
+                    <ul>
+                        <li>Servicios CRUD</li>
+                        <li>Pruebas unitarias</li>
+                        <li>Documentación técnica</li>
+                    </ul>
+                </li>
+                <li><strong>Semana 11 de marzo:</strong>
+                    <ul>
+                        <li>Integración y pruebas finales</li>
+                        <li>Ajustes según feedback</li>
+                        <li>Documentación CRUD</li>
+                    </ul>
+                </li>
+                <li><strong>Semana 18 de marzo:</strong>
+                    <ul>
+                        <li>Últimos ajustes</li>
+                        <li>Preparar entrega final</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="acta">
+            <h2>Acta 2 - Team HTML</h2>
+            <p><strong>Fecha:</strong> 27 Feb. 25</p>
+            <p><strong>Asistentes:</strong></p>
+            <ul>
+                <li>Renato Negrete</li>
+                <li>Juan Felipe Galvis</li>
+                <li>Santiago Forero Romero</li>
+            </ul>
+            <p><strong>Actividades sesión pasada:</strong></p>
+            <ul>
+                <li>Definición de roles</li>
+                <li>Inicio de la planificación del cronograma</li>
+            </ul>
+            <p><strong>Actividades de esta sesión:</strong></p>
+            <ul>
+                <li>Finalizar planificación del cronograma</li>
+                <li>Establecer entidades del proyecto</li>
+            </ul>
+        </div>
+
+        <div class="acta">
+            <h2>Acta 3 - Team HTML</h2>
+            <p><strong>Fecha:</strong> 4 Mar. 25</p>
+            <p><strong>Asistentes:</strong></p>
+            <ul>
+                <li>Renato Negrete</li>
+                <li>Juan Felipe Galvis</li>
+                <li>Santiago Forero Romero</li>
+                <li>Juan Esteban Paez</li>
+            </ul>
+            <p><strong>Actividades sesión pasada:</strong></p>
+            <ul>
+                <li>Finalizar cronograma</li>
+                <li>Establecer entidades</li>
+            </ul>
+            <p><strong>Actividades de esta sesión:</strong></p>
+            <ul>
+                <li>Planificar entidades para historias de usuario</li>
+                <li>Pruebas funcionales de la entidad Finca</li>
+                <li>Crear entidad Usuario</li>
+                <li>Instalar y configurar Jenkins</li>
+            </ul>
+        </div>
+
+        <div class="acta">
+            <h2>Acta 4 - Team HTML</h2>
+            <p><strong>Fecha:</strong> 6 Mar. 25</p>
+            <p><strong>Asistentes:</strong></p>
+            <ul>
+                <li>Renato Negrete</li>
+                <li>Gianfranco Cassandro</li>
+                <li>Santiago Forero Romero</li>
+                <li>Juan Esteban Paez</li>
+                <li>Juan Felipe Galvis</li>
+            </ul>
+            <p><strong>Actividades sesión pasada:</strong></p>
+            <ul>
+                <li>Crear entidad Usuario</li>
+                <li>Instalar Jenkins</li>
+                <li>Pruebas de Finca</li>
+            </ul>
+            <p><strong>Actividades de esta sesión:</strong></p>
+            <ul>
+                <li>Despliegue automático</li>
+                <li>Generar y subir Dockerfile</li>
+                <li>Instalar SonarQube</li>
+            </ul>
+        </div>
+
+        <div class="acta">
+            <h2>Acta 5 - Team HTML</h2>
+            <p><strong>Fecha:</strong> 13 Mar. 25</p>
+            <p><strong>Asistentes:</strong></p>
+            <ul>
+                <li>Renato Negrete</li>
+                <li>Santiago Forero Romero</li>
+                <li>Juan Felipe Galvis</li>
+            </ul>
+            <p><strong>Actividades sesión pasada:</strong></p>
+            <ul>
+                <li>Dockerfile</li>
+                <li>Despliegue automático</li>
+                <li>Instalar SonarQube</li>
+            </ul>
+            <p><strong>Actividades de esta sesión:</strong></p>
+            <ul>
+                <li>Complementar Admin, Controlador, DTO, Servicio</li>
+                <li>Pruebas unitarias (SonarQube)</li>
+            </ul>
+        </div>
+
+        <div class="acta">
+            <h2>Acta 6 - Team HTML</h2>
+            <p><strong>Fecha:</strong> 25 Mar. 25</p>
+            <p><strong>Asistentes:</strong></p>
+            <ul>
+                <li>Renato Negrete</li>
+                <li>Gianfranco Cassandro</li>
+                <li>Juan Felipe Galvis</li>
+            </ul>
+            <p><strong>Actividades sesión pasada:</strong></p>
+            <ul>
+                <li>Entidades finalizadas</li>
+            </ul>
+            <p><strong>Actividades de esta sesión:</strong></p>
+            <ul>
+                <li>Finalizar CRUD</li>
+                <li>Planificar pruebas</li>
+                <li>Completar diccionario de datos</li>
+                <li>Definir relaciones</li>
+                <li>Preparar presentación</li>
+            </ul>
+        </div>
     </div>
+
     <script th:src="@{/js/menu.js}"></script>
 </body>
 </html>
