@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas</title>
+    <link rel="stylesheet" th:href="@{/styles/navbar.css}">
+    <link rel="stylesheet" th:href="@{/styles/description.css}">
+</head>
+<body>
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+    <div class="main-content">
+        <h1>Pruebas funcionales</h1>
+        <p>Para hacer las pruebas funcoinales se hacen peticiones a los endpoint del backend a traves de Postman.</p>
+        <h2>Peticiones de CRUD</h2>
+        <div class="text">
+            <h2>Entidad Finca</h2>
+            <h3>Get Fincas</h3>
+            <li>
+                <ul>Metodo: GET /api/finca</ul>
+                <ul>Descripcion: Obtener todas las fincas del sistema.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetFincas.JPG}" alt=""></ul>
+            </li>
+            <h3>Get Finca by id</h3>
+            <li>
+                <ul>Metodo: GET /api/finca/id</ul>
+                <ul>Descripcion: Obtener una finca del sistema por su id.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetFincaId.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Post Finca</h3>
+            <li>
+                <ul>Metodo: POST /api/finca</ul>
+                <ul>Descripcion: Crear una finca en el sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul><img th:src="@{/images/PostFinca.JPG}" alt=""></ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/PostFincaRes.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Put Finca</h3>
+            <li>
+                <ul>Metodo: PUT /api/finca</ul>
+                <ul>Descripcion: Actualiza una finca del sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul><img th:src="@{/images/PutFincaBody.JPG}" alt=""></ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/PutFinca.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Delete Finca</h3>
+            <li>
+                <ul>Metodo: DELETE /api/finca/id</ul>
+                <ul>Descripcion: Eliminar una finca del sistema por su id.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado: 200 OK.</ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+        </div>
+        <div class="text">
+            <h2>Entidad Arrendador</h2>
+            <h3>Get Arrendadores</h3>
+            <li>
+                <ul>Metodo: GET /api/arrendador</ul>
+                <ul>Descripcion: Obtener todos los arrendadores del sistema.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetArrendadores.JPG}" alt=""></ul>
+            </li>
+            <h3>Get Arrendador by id</h3>
+            <li>
+                <ul>Metodo: GET /api/arrendador/id</ul>
+                <ul>Descripcion: Obtener un arrendador del sistema por su id.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetArrendadorId.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Post Arrendador</h3>
+            <li>
+                <ul>Metodo: POST /api/arrendador</ul>
+                <ul>Descripcion: Crear un arrendador en el sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul><img th:src="@{/images/PostArrBody.JPG}" alt=""></ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/PostArr.JPG}" alt=""></ul>
+            </li>
+            <h3>Put Arrendador</h3>
+            <li>
+                <ul>Metodo: PUT /api/arrendador</ul>
+                <ul>Descripcion: Actualiza un arrendador del sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul><img th:src="@{/images/PutArrBody.JPG}" alt=""></ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/PutArr.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Delete Arrendador</h3>
+            <li>
+                <ul>Metodo: DELETE /api/arrendador/id</ul>
+                <ul>Descripcion: Elimina un arrendador del sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul>Resultado: 200 OK</ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+        </div>
+        <div class="text">
+            <h2>Entidad Administrador</h2>
+            <h3>Get Administrador</h3>
+            <li>
+                <ul>Metodo: GET /api/administrador</ul>
+                <ul>Descripcion: Obtener todos los administradores del sistema.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetAdmins.JPG}" alt=""></ul>
+            </li>
+            <h3>Get Administrador by id</h3>
+            <li>
+                <ul>Metodo: GET /api/administrador/id</ul>
+                <ul>Descripcion: Obtener un administrador del sistema por su id.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetAdmin.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Post Administrador</h3>
+            <li>
+                <ul>Metodo: POST /api/administrador</ul>
+                <ul>Descripcion: Crear un administrador en el sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul><img th:src="@{/images/PostAdminBody.JPG}" alt=""></ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/PostAdmin.JPG}" alt=""></ul>
+            </li>
+            <h3>Put Administrador</h3>
+            <li>
+                <ul>Metodo: PUT /api/administrador</ul>
+                <ul>Descripcion: Actualiza un administrador del sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul><img th:src="@{/images/PutAdminBody.JPG}" alt=""></ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/PutAdmin.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Delete Administrador</h3>
+            <li>
+                <ul>Metodo: DELETE /api/administrador/id</ul>
+                <ul>Descripcion: Elimina un administrador del sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul>Resultado: 200 OK</ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+        </div>
+        <div class="text">
+            <h2>Entidad Banco</h2>
+            <h3>Get Banco</h3>
+            <li>
+                <ul>Metodo: GET /api/banco</ul>
+                <ul>Descripcion: Obtener todos los bancos del sistema.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetBancos.JPG}" alt=""></ul>
+            </li>
+            <h3>Get Banco by id</h3>
+            <li>
+                <ul>Metodo: GET /api/banco/id</ul>
+                <ul>Descripcion: Obtener un banco del sistema por su id.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetBanco.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <p>En el caso de la entidad Banco no se necesita tener los metodos de Post, Delete o Put ya que los bancos son valores estaticos.</p>
+        </div>
+        <div class="text">
+            <h2>Entidad Departamento</h2>
+            <h3>Get Departamento</h3>
+            <li>
+                <ul>Metodo: GET /api/departamento</ul>
+                <ul>Descripcion: Obtener todos los departamentos del sistema.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetDepars.JPG}" alt=""></ul>
+            </li>
+            <h3>Get Departamento by id</h3>
+            <li>
+                <ul>Metodo: GET /api/departamento/id</ul>
+                <ul>Descripcion: Obtener un departamento del sistema por su id.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetDept.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <p>En el caso de la entidad Departamento no se necesita tener los metodos de Post, Delete o Put ya que los bancos son valores estaticos.</p>
+        </div>
+        <div class="text">
+            <h2>Entidad Municipio</h2>
+            <h3>Get Municipio</h3>
+            <li>
+                <ul>Metodo: GET /api/municipio</ul>
+                <ul>Descripcion: Obtener todos los municipios del sistema.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetMunis.JPG}" alt=""></ul>
+            </li>
+            <h3>Get Municipios by id</h3>
+            <li>
+                <ul>Metodo: GET /api/municipio/id</ul>
+                <ul>Descripcion: Obtener un municipio del sistema por su id.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetMuni.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <p>En el caso de la entidad Municipio no se necesita tener los metodos de Post, Delete o Put ya que los bancos son valores estaticos.</p>
+        </div>
+        <div class="text">
+            <h2>Entidad Foto</h2>
+            <h3>Get Fotos</h3>
+            <li>
+                <ul>Metodo: GET /api/foto</ul>
+                <ul>Descripcion: Obtener todas las fotos del sistema.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetFotos.JPG}" alt=""></ul>
+            </li>
+            <h3>Get Foto by id</h3>
+            <li>
+                <ul>Metodo: GET /api/foto/id</ul>
+                <ul>Descripcion: Obtener una foto del sistema por su id.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetFoto.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Post Foto</h3>
+            <li>
+                <ul>Metodo: POST /api/foto</ul>
+                <ul>Descripcion: Crear un foto en el sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul><img th:src="@{/images/PostFotoBody.JPG}" alt=""></ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/PostFoto.JPG}" alt=""></ul>
+            </li>
+            <h3>Put Foto</h3>
+            <li>
+                <ul>Metodo: PUT /api/foto</ul>
+                <ul>Descripcion: Actualiza un foto del sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul><img th:src="@{/images/PutFotoBody.JPG}" alt=""></ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/PutFoto.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Delete Foto</h3>
+            <li>
+                <ul>Metodo: DELETE /api/foto/id</ul>
+                <ul>Descripcion: Elimina una foto del sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul>Resultado: 200 OK</ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+        </div>
+        <div class="text">
+            <h2>Entidad Pago</h2>
+            <h3>Get Pagos</h3>
+            <li>
+                <ul>Metodo: GET /api/pago</ul>
+                <ul>Descripcion: Obtener todos los pagos del sistema.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetPagos.JPG}" alt=""></ul>
+            </li>
+            <h3>Get Pago by id</h3>
+            <li>
+                <ul>Metodo: GET /api/pago/id</ul>
+                <ul>Descripcion: Obtener un pago del sistema por su id.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetPago.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Post Pago</h3>
+            <li>
+                <ul>Metodo: POST /api/pago</ul>
+                <ul>Descripcion: Crear un pago en el sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul><img th:src="@{/images/PostPagoBody.JPG}" alt=""></ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/PostPago.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found y Error 400 Bad Request</ul>
+            </li>
+            <h3>Put Pago</h3>
+            <li>
+                <ul>Metodo: PUT /api/pago</ul>
+                <ul>Descripcion: Actualiza un pago del sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul><img th:src="@{/images/PutPagoBody.JPG}" alt=""></ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/PutPago.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Delete Pago</h3>
+            <li>
+                <ul>Metodo: DELETE /api/pago/id</ul>
+                <ul>Descripcion: Elimina un pago del sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul>Resultado: 200 OK</ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+        </div>
+        <div class="text">
+            <h2>Entidad Solicitud</h2>
+            <h3>Get Solicitudes</h3>
+            <li>
+                <ul>Metodo: GET /api/solicitud</ul>
+                <ul>Descripcion: Obtener todas las solicitudes del sistema.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetSolicitudes.JPG}" alt=""></ul>
+            </li>
+            <h3>Get Solicitud by id</h3>
+            <li>
+                <ul>Metodo: GET /api/solicitud/id</ul>
+                <ul>Descripcion: Obtener una solicitud del sistema por su id.</ul>
+                <ul>No necesita un cuerpo.</ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/GetSolicitud.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Post Solicitud</h3>
+            <li>
+                <ul>Metodo: POST /api/solicitud</ul>
+                <ul>Descripcion: Crear una solicitud en el sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul><img th:src="@{/images/PostSolBody.JPG}" alt=""></ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/PostSolicitud.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found y Error 400 Bad Request</ul>
+            </li>
+            <h3>Put Solicitud</h3>
+            <li>
+                <ul>Metodo: PUT /api/solicitud</ul>
+                <ul>Descripcion: Actualiza una solicitud del sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul><img th:src="@{/images/PutSolBody.JPG}" alt=""></ul>
+                <ul>Resultado:</ul>
+                <ul><img th:src="@{/images/PutSol.JPG}" alt=""></ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+            <h3>Delete Solicitud</h3>
+            <li>
+                <ul>Metodo: DELETE /api/solicitud/id</ul>
+                <ul>Descripcion: Elimina un pago del sistema.</ul>
+                <ul>Cuerpo:</ul>
+                <ul>Resultado: 200 OK</ul>
+                <ul>Posibles errores: Error 404 Not Found.</ul>
+            </li>
+        </div>
+    </div>
+    <script th:src="@{/js/menu.js}"></script>
+</body>
+</html>

@@ -61,6 +61,11 @@ public class Controlador {
         return new ModelAndView("pruebas");
     }
 
+    @GetMapping("/pruebas/funcionales")
+    public ModelAndView pruebasfuncModelAndView() {
+        return new ModelAndView("pruebasfunc");
+    }
+
     @GetMapping("/despliegue")
     public ModelAndView despliegueModelAndView() {
         return new ModelAndView("despliegue");
